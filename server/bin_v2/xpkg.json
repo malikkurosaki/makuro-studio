@@ -1,0 +1,86 @@
+{
+    "project": [
+        {
+            "name": "generate model"
+        },
+        {
+            "name": "run debug chrome"
+        },
+        {
+            "name": "run debug server"
+        },
+        {
+            "name": "server command"
+        },
+        {
+            "name": "client command"
+        },
+        {
+            "name": "git push"
+        },
+        {
+            "name": "flutter build web"
+        },
+        {
+            "name": "flutter build apk"
+        },
+        {
+            "name": "set db connection"
+        },
+        {
+            "name": "prisma generate"
+        },
+        {
+            "name": "install module"
+        }
+    ],
+    "flutter": [
+        {
+            "name": "get"
+        },
+        {
+            "name": "get_storage"
+        },
+        {
+            "name": "flutter_easyloading"
+        }
+    ],
+    "nodeJs": [
+        {
+            "name": "express"
+        },
+        {
+            "name": "express-async-handler"
+        },
+        {
+            "name": "cors"
+        },
+        {
+            "name": "colors"
+        },
+        {
+            "name": "prompts"
+        },
+        {
+            "name": "prisma"
+        },
+        {
+            "name": "@prisma/client"
+        },
+        {
+            "name": "js-beautify"
+        },
+        {
+            "name": "lodash"
+        },
+        {
+            "name": "multer"
+        },
+        {
+            "name": "simple-ssh"
+        },
+        {
+            "name": "uuid"
+        }
+    ]
+}

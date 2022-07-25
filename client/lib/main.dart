@@ -1,7 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
+import 'package:makuro_studio/utils/makuro_pages.dart';
 
 void main() {
   runApp(const MyApp());
+}
+
+class MakuroApp extends StatelessWidget {
+  const MakuroApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GetMaterialApp(
+      title: 'Makuro',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      initialRoute: '/',
+      getPages: MakuroPages.pages,
+    );
+  }
 }
 
 class MyApp extends StatelessWidget {
