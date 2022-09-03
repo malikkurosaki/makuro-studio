@@ -1,3 +1,9 @@
 {
-    "isHttps": "false"
+    "isHttps": false,
+    "route": [
+        {
+            "route": "/d",
+            "path": "dsdsds"
+        }
+    ]
 }
