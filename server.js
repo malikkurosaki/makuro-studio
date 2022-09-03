@@ -12,9 +12,7 @@ app.get('/', (req, res) => {
 
 http.createServer(app).listen(HTTP_PORT, () => {
     console.log(`HTTP server listening on port ${HTTP_PORT}`);
-
 });
-
 
 const options = {
     key: fs.readFileSync('./key.pem'),
