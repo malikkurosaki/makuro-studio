@@ -6,11 +6,9 @@ const PORT = process.env.HPPT_PORT || 5000;
 const fs = require('fs');
 const router = require('./router');
 const config = require('./config.json');
+const path = require('path');
 
-app.get('/', (req, res) => {
-    res.send("apa kabarnya");
-})
-
+app.use(express.static(path.join(__dirname, "./src/build/web")))
 app.use(router);
 app.use((req, res) => {
     res.status(404).type("text/html").send("404 | Not Found");
