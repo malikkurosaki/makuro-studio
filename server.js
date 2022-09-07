@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const http = require('http');
 const https = require('https');
-const PORT = process.env.HPPT_PORT || 5000;
+// const PORT = process.env.HPPT_PORT || 5000;
 const fs = require('fs');
 const router = require('./router');
 const config = require('./config.json');
@@ -23,12 +23,12 @@ if (config.isHttps) {
         cert: fs.readFileSync('./crt.pem')
     };
 
-    https.createServer(options, app).listen(PORT, () => {
-        console.log(`HTTPS server listening on port ${PORT}`);
+    https.createServer(options, app).listen(config.port, () => {
+        console.log(`HTTPS server listening on port ${config.port}`);
     });
 } else {
-    http.createServer(app).listen(PORT, () => {
-        console.log(`HTTP server listening on port ${PORT}`);
+    http.createServer(app).listen(config.port, () => {
+        console.log(`HTTP server listening on port ${config.port}`);
     });
 
 }

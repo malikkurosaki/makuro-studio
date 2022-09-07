@@ -1,3 +1,4 @@
 {
-    "isHttps": false
+  "isHttps": true,
+  "port": 3000
 }
