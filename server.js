@@ -8,7 +8,7 @@ const router = require('./router');
 const config = require('./config.json');
 const path = require('path');
 
-app.use(express.static(path.join(__dirname, "./src/build/web")))
+app.use(express.static(path.join(__dirname, "./dist")))
 app.use(router);
 app.use((req, res) => {
     res.status(404).type("text/html").send("404 | Not Found");
