@@ -13,5 +13,5 @@ prompts({
     message: "masukkan password"
 }).then(({ pass }) => {
     if (!pass) return console.log("ok doki");
-    exec(`sshpass -p ${pass} ssh -o StrictHostKeyChecking=no -p 22 makuro@${config.sHost} "cd makuro-studio && git pull && pm2 restart all"`, { stdio: "inherit" });
+    exec(`sshpass -p ${pass} ssh makuro@${config.sHost} "cd makuro-studio && git pull && pm2 restart all"`, { stdio: "inherit" });
 })
