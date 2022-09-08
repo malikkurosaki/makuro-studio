@@ -7,9 +7,12 @@ const fs = require('fs');
 const router = require('./router');
 const config = require('./config.json');
 const path = require('path');
+const routeImage = require('./router_image');
 
 app.use(express.static(path.join(__dirname, "./dist")))
 app.use(router);
+app.use(routeImage);
+
 app.use((req, res) => {
     res.status(404).type("text/html").send("404 | Not Found");
 })

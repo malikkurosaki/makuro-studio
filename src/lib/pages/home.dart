@@ -7,6 +7,30 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text("ini");
+    return Material(
+      child: Column(
+        children: [
+          Container(
+            decoration: BoxDecoration(color: Colors.black),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Text(
+                    "Makuro Studio",
+                    style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+            ),
+          ),
+          Flexible(
+            child: ListView(
+              children: [],
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
