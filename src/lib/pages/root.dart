@@ -8,10 +8,10 @@ import 'package:src/vl.dart';
 class Root extends StatelessWidget {
   const Root({Key? key}) : super(key: key);
 
-  Future<void> _onLoad()async{
+  Future<void> _onLoad() async {
     await 3.delay();
-    Vl.isSplash.val = false;
     Pages.home().go();
+    Vl.isSplash.val = false;
   }
 
   @override
