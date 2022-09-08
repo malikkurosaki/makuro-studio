@@ -14,5 +14,5 @@ prompts({
     message: "masukkan password"
 }).then(({ pass }) => {
     if (!pass) return console.log("ok doki");
-    exec(`sshpass -p ${pass} ssh makuro@${config.sHost} "cd makuro-studio && ls"`, { stdio: "inherit" });
+    exec(`sshpass -p ${pass} ssh makuro@${config.sHost} "cd makuro-studio && git pull"`, { stdio: "inherit" });
 })
