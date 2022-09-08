@@ -10,8 +10,8 @@ class Root extends StatelessWidget {
 
   Future<void> _onLoad() async {
     await 3.delay();
-    Pages.home().go();
     Vl.isSplash.val = false;
+    Pages.home().go();
   }
 
   @override

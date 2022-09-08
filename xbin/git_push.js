@@ -4,6 +4,8 @@ const path = require('path');
 const prompts = require('prompts');
 const config = require('./../config.json')
 
+
+require('./build_web');
 const gitBranch = exec('git rev-parse --abbrev-ref HEAD').toString().trim();
 exec(`git add . && git commit -m "update" && git push origin ${gitBranch}`, { stdio: "inherit", cwd: path.join(__dirname, "./../") });
 
