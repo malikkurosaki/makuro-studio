@@ -7,7 +7,7 @@ const _ = require('lodash');
 routeImage.get(`/assets/image-assets/:name`, (req, res) => {
 
     if (fs.existsSync(path.join(__dirname, `./assets/images/${req.params.name}`))) {
-        res.type('image/png').sendFile(path.join(__dirname, `./assets/images/${req.params.name}`));
+        res.sendFile(path.join(__dirname, `./assets/images/${req.params.name}`));
         return;
     } else {
         res.sendFile(path.join(__dirname, `./assets/default.png`));

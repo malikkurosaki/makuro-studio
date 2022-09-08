@@ -8,7 +8,9 @@ const router = require('./router');
 const config = require('./config.json');
 const path = require('path');
 const routeImage = require('./router_image');
+const cors = require('cors');
 
+app.use(cors())
 app.use(express.static(path.join(__dirname, "./dist")))
 app.use(router);
 app.use(routeImage);
