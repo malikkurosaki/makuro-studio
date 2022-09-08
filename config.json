@@ -2,5 +2,6 @@
   "isHttps": false,
   "port": 3000,
   "host": "localhost",
-  "url": "http://localhost:3000" 
+  "url": "http://localhost:3000",
+  "sHost": "103.171.85.55"
 }
