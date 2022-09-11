@@ -8,4 +8,4 @@ config.host = "makurostudio.my.id";
 config.url = `${config.protocol}://${config.host}:${config.port}`
 
 fs.writeFileSync(path.join(__dirname, "./../config.json"), beautify(JSON.stringify(config), { indent_size: 2 }))
-console.log("Config updated")
+console.log("Config updated url server")

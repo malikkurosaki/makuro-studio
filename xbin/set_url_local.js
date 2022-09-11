@@ -7,5 +7,5 @@ config.protocol = "http";
 config.host = "localhost";
 config.url = `${config.protocol}://${config.host}:${config.port}`
 
-fs.writeFileSync(path.join(__dirname, "./../config.json"), beautify(config, { indent_size: 2 }))
-console.log("Config updated")
+fs.writeFileSync(path.join(__dirname, "./../config.json"), beautify(JSON.stringify(config), { indent_size: 2 }))
+console.log("Config updated url local")
