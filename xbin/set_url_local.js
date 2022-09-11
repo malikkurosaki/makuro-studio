@@ -9,3 +9,4 @@ config.url = `${config.protocol}://${config.host}:${config.port}`
 
 fs.writeFileSync(path.join(__dirname, "./../config.json"), beautify(JSON.stringify(config), { indent_size: 2 }))
 console.log("Config updated url local")
+require('./config_generate')
