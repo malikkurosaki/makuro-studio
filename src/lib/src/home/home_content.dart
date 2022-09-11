@@ -7,6 +7,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/instance_manager.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:src/components/gambar.dart';
+import 'package:src/config.dart';
 import 'package:src/img.dart';
 import 'package:get/get.dart';
 
@@ -344,7 +345,8 @@ class HomeContent extends StatelessWidget {
             child: Gambar(
               imageUrl: Img.footer,
             ),
-          )
+          ),
+          Text(Config.url.toString())
         ],
       ),
     );
