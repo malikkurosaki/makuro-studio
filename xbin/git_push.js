@@ -17,6 +17,15 @@ prompts({
     if (!pass) return console.log("ok doki");
     exec(`sshpass -p ${pass} ssh makuro@${config.sHost} "cd makuro-studio && git pull && source ~/.nvm/nvm.sh && pm2 restart all"`, { stdio: "inherit" });
 
-}).then(() => {
-    require('./set_url_local');
+}).then(async () => {
+    await  new Promise((resolve, reject) => {
+        require('./set_url_local');
+        resolve();
+    })
+
+    await new Promise((resolve, reject) => {
+        require('./config_generate');
+        resolve();
+    })
+    
 })
