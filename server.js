@@ -35,7 +35,6 @@ if (config.isHttps) {
     http.createServer(app).listen(config.port, () => {
         console.log(`HTTP server listening on port ${config.port}`);
     });
-
 }
 
 

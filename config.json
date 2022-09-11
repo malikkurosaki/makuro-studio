@@ -1,7 +1,9 @@
 {
   "isHttps": false,
   "port": 8080,
-  "host": "localhost",
-  "url": "http://localhost:8080",
+  "protocol": "https",
+  "host": "makurostudio.my.id",
+  "url": "https://makurostudio.my.id:8080",
+  "urlServer": "https://makurostudio.my.id:8080",
   "sHost": "103.171.85.55"
 }
