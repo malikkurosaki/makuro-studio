@@ -5,6 +5,7 @@ const prompts = require('prompts');
 const config = require('./../config.json')
 
 require('./set_url_server')
+require('./config_generate');
 require('./build_web');
 const gitBranch = exec('git rev-parse --abbrev-ref HEAD').toString().trim();
 exec(`git add . && git commit -m "update" && git push origin ${gitBranch}`, { stdio: "inherit", cwd: path.join(__dirname, "./../") });
@@ -19,4 +20,5 @@ prompts({
 
 }).then(() => {
     require('./set_url_local');
+    require('./config_generate');
 });

@@ -347,6 +347,7 @@ class HomeContent extends StatelessWidget {
             ),
           ),
           Text(Config.url.toString())
+          
         ],
       ),
     );
