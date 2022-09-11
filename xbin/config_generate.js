@@ -3,6 +3,7 @@ const _ = require('lodash');
 const beautify = require('js-beautify');
 const fs = require('fs');
 const path = require('path');
+const colors = require('colors');
 
 const key = Object.keys(config);
 let listItem = [];
@@ -16,4 +17,4 @@ class Config{
 }
 `
 fs.writeFileSync(path.join(__dirname, "../src/lib/config.dart"), beautify(result, { indent_size: 2 }));
-console.log("config generate complete");
+console.log("config generate complete".green);
