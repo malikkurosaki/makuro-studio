@@ -4,9 +4,13 @@ class Config {
   static
   const port = 8080;
   static
-  const host = 'localhost';
+  const protocol = 'https';
   static
-  const url = 'http://localhost:8080';
+  const host = 'makurostudio.my.id';
+  static
+  const url = 'https://makurostudio.my.id:8080';
+  static
+  const urlServer = 'https://makurostudio.my.id:8080';
   static
   const sHost = '103.171.85.55';
 }
