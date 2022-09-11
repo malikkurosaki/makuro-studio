@@ -10,7 +10,7 @@ import 'package:src/img.dart';
 import 'package:get/get.dart';
 
 class HomeContent extends StatelessWidget {
-  HomeContent({Key? key}) : super(key: key);
+  const HomeContent({Key? key}) : super(key: key);
   final des1 =
       'Makuro Studio transforms the app development process. Build, test, and deploy beautiful mobile, web, desktop, and embedded apps from a single codebase';
   final flutterText =
@@ -22,6 +22,7 @@ class HomeContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
       builder: (context, media) => ListView(
+        shrinkWrap: true,
         controller: ScrollController(),
         children: [
           Center(
@@ -55,7 +56,19 @@ class HomeContent extends StatelessWidget {
               ),
             ),
           ),
-          CachedNetworkImage(imageUrl: Img.gambar5, fit: BoxFit.cover),
+          CachedNetworkImage(
+            imageUrl: Img.gambar5,
+            fit: BoxFit.cover,
+            placeholder: (context, value) => Icon(
+              Icons.image_search_sharp,
+              size: 50,
+            ),
+            errorWidget: (contect, value, apa) => Icon(
+              Icons.image_not_supported_sharp,
+              size: 100,
+            ),
+            useOldImageOnUrlChange: true,
+          ),
           Column(
             children: [
               Padding(
@@ -114,7 +127,13 @@ class HomeContent extends StatelessWidget {
               children: [
                 SizedBox(
                     width: media.isMobile ? Get.width : Get.width / 2,
-                    child: CachedNetworkImage(imageUrl: Img.gambar2)),
+                    child: CachedNetworkImage(
+                      imageUrl: Img.gambar2,
+                      errorWidget: (contect, value, apa) => Icon(
+                        Icons.image_not_supported_sharp,
+                        size: 100,
+                      ),
+                    )),
                 SizedBox(
                   width: media.isMobile ? Get.width : Get.width / 2,
                   child: Padding(
@@ -189,13 +208,27 @@ class HomeContent extends StatelessWidget {
                   ),
                   SizedBox(
                       width: media.isMobile ? Get.width : Get.width / 2,
-                      child: CachedNetworkImage(imageUrl: Img.gambar1)),
+                      child: CachedNetworkImage(
+                        imageUrl: Img.gambar1,
+                        errorWidget: (contect, value, apa) => Icon(
+                          Icons.image_not_supported_sharp,
+                          size: 100,
+                        ),
+                      )),
                 ],
               ),
             ),
           ),
           Center(
-            child: SizedBox(width: media.isMobile ? Get.width : 500, child: CachedNetworkImage(imageUrl: Img.gambar3)),
+            child: SizedBox(
+                width: media.isMobile ? Get.width : 500,
+                child: CachedNetworkImage(
+                  imageUrl: Img.gambar3,
+                  errorWidget: (contect, value, apa) => Icon(
+                    Icons.image_not_supported_sharp,
+                    size: 100,
+                  ),
+                )),
           ),
           Padding(
             padding: const EdgeInsets.all(16),
@@ -221,12 +254,9 @@ class HomeContent extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(32),
-                      child: Text("Cross-Platform App",
-                        style: TextStyle(
-                          fontSize: 42,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.grey.shade800
-                        ),
+                      child: Text(
+                        "Cross-Platform App",
+                        style: TextStyle(fontSize: 42, fontWeight: FontWeight.bold, color: Colors.grey.shade800),
                       ),
                     ),
                     Wrap(
@@ -235,13 +265,25 @@ class HomeContent extends StatelessWidget {
                             width: media.isMobile ? Get.width : Get.width / 2.5,
                             child: Padding(
                               padding: const EdgeInsets.all(24),
-                              child: CachedNetworkImage(imageUrl: Img.gambar4),
+                              child: CachedNetworkImage(
+                                imageUrl: Img.gambar4,
+                                errorWidget: (contect, value, apa) => Icon(
+                                  Icons.image_not_supported_sharp,
+                                  size: 100,
+                                ),
+                              ),
                             )),
                         SizedBox(
                           width: media.isMobile ? Get.width : Get.width / 2.5,
                           child: Padding(
                             padding: const EdgeInsets.all(24),
-                            child: CachedNetworkImage(imageUrl: Img.gambar6),
+                            child: CachedNetworkImage(
+                              imageUrl: Img.gambar6,
+                              errorWidget: (contect, value, apa) => Icon(
+                                Icons.image_not_supported_sharp,
+                                size: 100,
+                              ),
+                            ),
                           ),
                         ),
                       ],
@@ -291,6 +333,10 @@ class HomeContent extends StatelessWidget {
                             imageUrl: Img.flutter,
                             width: 200,
                             height: 100,
+                            errorWidget: (contect, value, apa) => Icon(
+                              Icons.image_not_supported_sharp,
+                              size: 100,
+                            ),
                           ),
                         ),
                         Padding(
@@ -314,6 +360,10 @@ class HomeContent extends StatelessWidget {
                             fit: BoxFit.contain,
                             width: 200,
                             height: 100,
+                            errorWidget: (contect, value, apa) => Icon(
+                              Icons.image_not_supported_sharp,
+                              size: 100,
+                            ),
                           ),
                         ),
                         Padding(
@@ -332,8 +382,14 @@ class HomeContent extends StatelessWidget {
           ),
           Container(
             color: Colors.grey.shade300,
-            child: CachedNetworkImage(imageUrl: Img.footer,
-            fit: BoxFit.cover,),
+            child: CachedNetworkImage(
+              imageUrl: Img.footer,
+              errorWidget: (contect, value, apa) => Icon(
+                Icons.image_not_supported_sharp,
+                size: 100,
+              ),
+              fit: BoxFit.cover,
+            ),
           )
         ],
       ),
