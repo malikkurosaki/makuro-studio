@@ -27,6 +27,9 @@ class Img {
   const gambar6 = "${Config.url}/assets/image-assets/gambar6.png";
 
   static
+  const head = "${Config.url}/assets/image-assets/head.png";
+
+  static
   const nodejs = "${Config.url}/assets/image-assets/nodejs.png";
 
 }

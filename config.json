@@ -1,5 +1,5 @@
 {
-  "isHttps": false,
+  "isHttps": true,
   "port": 3000,
   "host": "localhost",
   "url": "http://localhost:3000",

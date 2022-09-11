@@ -6,6 +6,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/instance_manager.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:src/components/gambar.dart';
 import 'package:src/img.dart';
 import 'package:get/get.dart';
 
@@ -25,6 +26,7 @@ class HomeContent extends StatelessWidget {
         shrinkWrap: true,
         controller: ScrollController(),
         children: [
+          Gambar(imageUrl: Img.head),
           Center(
             child: SizedBox(
               width: media.isMobile ? Get.width : 720,
@@ -34,7 +36,7 @@ class HomeContent extends StatelessWidget {
                   children: [
                     Text(
                       "Build apps for any screen",
-                      style: TextStyle(fontSize: 42, fontWeight: FontWeight.w900, color: Colors.grey.shade700),
+                      style: TextStyle(fontSize: media.isMobile? 32: 42, fontWeight: FontWeight.w900, color: Colors.grey.shade700),
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 32),
@@ -56,19 +58,8 @@ class HomeContent extends StatelessWidget {
               ),
             ),
           ),
-          CachedNetworkImage(
-            imageUrl: Img.gambar5,
-            fit: BoxFit.cover,
-            placeholder: (context, value) => Icon(
-              Icons.image_search_sharp,
-              size: 50,
-            ),
-            errorWidget: (contect, value, apa) => Icon(
-              Icons.image_not_supported_sharp,
-              size: 100,
-            ),
-            useOldImageOnUrlChange: true,
-          ),
+          Gambar(
+            imageUrl: Img.gambar5,),
           Column(
             children: [
               Padding(
@@ -80,7 +71,7 @@ class HomeContent extends StatelessWidget {
                       child: Text(
                         des1,
                         textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 32, color: Colors.grey.shade800, fontWeight: FontWeight.bold),
+                        style: TextStyle(fontSize: media.isMobile? 24: 32, color: Colors.grey.shade800, fontWeight: FontWeight.bold),
                       ),
                     ),
                     SizedBox(
@@ -90,6 +81,7 @@ class HomeContent extends StatelessWidget {
                         child: Text(
                           "Over the years, with the great advancement and innovations in the mobile app development industry, you have a wide choice of technologies to develop the cross-platform application. But, recently, Google’s Flutter has outshined as one of the best options for both developers and businesses to get started with their app in just a few days",
                           textAlign: TextAlign.center,
+                          style: TextStyle(),
                         ),
                       ),
                     )
@@ -127,12 +119,8 @@ class HomeContent extends StatelessWidget {
               children: [
                 SizedBox(
                     width: media.isMobile ? Get.width : Get.width / 2,
-                    child: CachedNetworkImage(
+                    child: Gambar(
                       imageUrl: Img.gambar2,
-                      errorWidget: (contect, value, apa) => Icon(
-                        Icons.image_not_supported_sharp,
-                        size: 100,
-                      ),
                     )),
                 SizedBox(
                   width: media.isMobile ? Get.width : Get.width / 2,
@@ -208,12 +196,8 @@ class HomeContent extends StatelessWidget {
                   ),
                   SizedBox(
                       width: media.isMobile ? Get.width : Get.width / 2,
-                      child: CachedNetworkImage(
+                      child: Gambar(
                         imageUrl: Img.gambar1,
-                        errorWidget: (contect, value, apa) => Icon(
-                          Icons.image_not_supported_sharp,
-                          size: 100,
-                        ),
                       )),
                 ],
               ),
@@ -222,12 +206,8 @@ class HomeContent extends StatelessWidget {
           Center(
             child: SizedBox(
                 width: media.isMobile ? Get.width : 500,
-                child: CachedNetworkImage(
+                child: Gambar(
                   imageUrl: Img.gambar3,
-                  errorWidget: (contect, value, apa) => Icon(
-                    Icons.image_not_supported_sharp,
-                    size: 100,
-                  ),
                 )),
           ),
           Padding(
@@ -256,7 +236,7 @@ class HomeContent extends StatelessWidget {
                       padding: const EdgeInsets.all(32),
                       child: Text(
                         "Cross-Platform App",
-                        style: TextStyle(fontSize: 42, fontWeight: FontWeight.bold, color: Colors.grey.shade800),
+                        style: TextStyle(fontSize: media.isMobile? 24: 42, fontWeight: FontWeight.bold, color: Colors.grey.shade800),
                       ),
                     ),
                     Wrap(
@@ -265,24 +245,16 @@ class HomeContent extends StatelessWidget {
                             width: media.isMobile ? Get.width : Get.width / 2.5,
                             child: Padding(
                               padding: const EdgeInsets.all(24),
-                              child: CachedNetworkImage(
+                              child: Gambar(
                                 imageUrl: Img.gambar4,
-                                errorWidget: (contect, value, apa) => Icon(
-                                  Icons.image_not_supported_sharp,
-                                  size: 100,
-                                ),
                               ),
                             )),
                         SizedBox(
                           width: media.isMobile ? Get.width : Get.width / 2.5,
                           child: Padding(
                             padding: const EdgeInsets.all(24),
-                            child: CachedNetworkImage(
+                            child: Gambar(
                               imageUrl: Img.gambar6,
-                              errorWidget: (contect, value, apa) => Icon(
-                                Icons.image_not_supported_sharp,
-                                size: 100,
-                              ),
                             ),
                           ),
                         ),
@@ -329,14 +301,8 @@ class HomeContent extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(16),
-                          child: CachedNetworkImage(
+                          child: Gambar(
                             imageUrl: Img.flutter,
-                            width: 200,
-                            height: 100,
-                            errorWidget: (contect, value, apa) => Icon(
-                              Icons.image_not_supported_sharp,
-                              size: 100,
-                            ),
                           ),
                         ),
                         Padding(
@@ -355,15 +321,8 @@ class HomeContent extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(16),
-                          child: CachedNetworkImage(
+                          child: Gambar(
                             imageUrl: Img.nodejs,
-                            fit: BoxFit.contain,
-                            width: 200,
-                            height: 100,
-                            errorWidget: (contect, value, apa) => Icon(
-                              Icons.image_not_supported_sharp,
-                              size: 100,
-                            ),
                           ),
                         ),
                         Padding(
@@ -382,13 +341,8 @@ class HomeContent extends StatelessWidget {
           ),
           Container(
             color: Colors.grey.shade300,
-            child: CachedNetworkImage(
+            child: Gambar(
               imageUrl: Img.footer,
-              errorWidget: (contect, value, apa) => Icon(
-                Icons.image_not_supported_sharp,
-                size: 100,
-              ),
-              fit: BoxFit.cover,
             ),
           )
         ],

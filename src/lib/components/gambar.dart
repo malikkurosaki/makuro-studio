@@ -4,13 +4,13 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class Gambar extends StatelessWidget {
-  const Gambar({Key? key, required this.url}) : super(key: key);
-  final String url;
+  const Gambar({Key? key, required this.imageUrl}) : super(key: key);
+  final String imageUrl;
 
   @override
   Widget build(BuildContext context) {
     return CachedNetworkImage(
-      imageUrl: url,
+      imageUrl: imageUrl,
       placeholder: (context, value) => Container(
         height: 100,
         color: Colors.grey.shade100,
