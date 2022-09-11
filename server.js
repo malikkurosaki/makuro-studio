@@ -24,8 +24,8 @@ app.use((req, res) => {
 
 if (config.isHttps) {
     const options = {
-        key: fs.readFileSync('/etc/letsencrypt/live/makurostudio.my.id/privkey.pem'),
-        cert: fs.readFileSync('/etc/letsencrypt/live/makurostudio.my.id/fullchain.pem')
+        key: fs.readFileSync(path.join(__dirname, "./../cert/makuro_studio_key.pem")),
+        cert: fs.readFileSync(path.join(__dirname, "./../cert/makuro_studio_cert.pem"))
     };
 
     https.createServer(options, app).listen(config.port, () => {
