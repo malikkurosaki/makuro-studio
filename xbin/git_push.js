@@ -18,11 +18,6 @@ prompts({
     exec(`sshpass -p ${pass} ssh makuro@${config.sHost} "cd makuro-studio && git pull && source ~/.nvm/nvm.sh && pm2 restart all"`, { stdio: "inherit" });
     let gen2 = require('./config_generate.js');
 }).then(async () => {
-    // await new Promise((resolve, reject) => {
-    //     let lok = require('./set_url_local');
-    //     resolve();
-    // })
-
-    
+    let lok = require('./set_url_local');
 
 })
