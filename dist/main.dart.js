@@ -57688,7 +57688,7 @@ n=p.w
 o=o.b_(0,n==null?A.ak():n).a/2
 m=o
 o=p
-p=m}p=A.cF(new A.ep("http://localhost:3000/assets/image-assets/gambar2.png",f),f,p)
+p=m}p=A.cF(new A.ep("http://localhost:8080/assets/image-assets/gambar2.png",f),f,p)
 if(d){n=o.gbG()
 l=o.w
 n=n.b_(0,l==null?A.ak():l).a}else{n=o.gbG()
@@ -57704,11 +57704,11 @@ if(d){k=o.gbG()
 j=o.w
 k=k.b_(0,j==null?A.ak():j).a}else{k=o.gbG()
 j=o.w
-k=k.b_(0,j==null?A.ak():j).a/2}k=A.dn(new A.b8(new A.aR(0,p,0,p),A.a1o(A.b([l,A.cF(new A.ep("http://localhost:3000/assets/image-assets/gambar1.png",f),f,k)],q)),f),f,f)
+k=k.b_(0,j==null?A.ak():j).a/2}k=A.dn(new A.b8(new A.aR(0,p,0,p),A.a1o(A.b([l,A.cF(new A.ep("http://localhost:8080/assets/image-assets/gambar1.png",f),f,k)],q)),f),f,f)
 if(d){p=o.gbG()
 l=o.w
 p=p.b_(0,l==null?A.ak():l).a}else p=500
-p=A.dn(A.cF(new A.ep("http://localhost:3000/assets/image-assets/gambar3.png",f),f,p),f,f)
+p=A.dn(A.cF(new A.ep("http://localhost:8080/assets/image-assets/gambar3.png",f),f,p),f,f)
 if(d){l=o.gbG()
 j=o.w
 l=l.b_(0,j==null?A.ak():j).a}else l=720
@@ -57718,12 +57718,12 @@ if(d){i=o.gbG()
 h=o.w
 i=i.b_(0,h==null?A.ak():h).a}else{i=o.gbG()
 h=o.w
-i=i.b_(0,h==null?A.ak():h).a/2.5}i=A.cF(new A.b8(B.lb,new A.ep("http://localhost:3000/assets/image-assets/gambar4.png",f),f),f,i)
+i=i.b_(0,h==null?A.ak():h).a/2.5}i=A.cF(new A.b8(B.lb,new A.ep("http://localhost:8080/assets/image-assets/gambar4.png",f),f),f,i)
 if(d){h=o.gbG()
 g=o.w
 h=h.b_(0,g==null?A.ak():g).a}else{h=o.gbG()
 g=o.w
-h=h.b_(0,g==null?A.ak():g).a/2.5}h=A.a1o(A.b([i,A.cF(new A.b8(B.lb,new A.ep("http://localhost:3000/assets/image-assets/gambar6.png",f),f),f,h)],q))
+h=h.b_(0,g==null?A.ak():g).a/2.5}h=A.a1o(A.b([i,A.cF(new A.b8(B.lb,new A.ep("http://localhost:8080/assets/image-assets/gambar6.png",f),f),f,h)],q))
 if(d){i=o.gbG()
 g=o.w
 i=i.b_(0,g==null?A.ak():g).a}else i=720
@@ -57733,12 +57733,12 @@ if(d){j=o.gbG()
 g=o.w
 j=j.b_(0,g==null?A.ak():g).a}else{j=o.gbG()
 g=o.w
-j=j.b_(0,g==null?A.ak():g).a/2}j=A.cF(A.jF(A.b([new A.b8(B.d6,new A.ep("http://localhost:3000/assets/image-assets/flutter.png",f),f),new A.b8(B.c6,A.c7("This year, mobile applications continued to become more and more popular. Fortunately there are many programming tools available to developers who want to create them. Among these tools there is Flutter, which has distinguished itself lately.",f,B.V,f),f)],q),B.ao),f,j)
+j=j.b_(0,g==null?A.ak():g).a/2}j=A.cF(A.jF(A.b([new A.b8(B.d6,new A.ep("http://localhost:8080/assets/image-assets/flutter.png",f),f),new A.b8(B.c6,A.c7("This year, mobile applications continued to become more and more popular. Fortunately there are many programming tools available to developers who want to create them. Among these tools there is Flutter, which has distinguished itself lately.",f,B.V,f),f)],q),B.ao),f,j)
 if(d){d=o.gbG()
 o=o.w
 d=d.b_(0,o==null?A.ak():o).a}else{d=o.gbG()
 o=o.w
-d=d.b_(0,o==null?A.ak():o).a/2}return A.acR(A.b([new A.ep("http://localhost:3000/assets/image-assets/head.png",f),s,new A.ep("http://localhost:3000/assets/image-assets/gambar5.png",f),r,n,k,p,new A.b8(B.d6,l,f),i,h,new A.b8(B.l9,A.dn(A.a1o(A.b([j,A.cF(A.jF(A.b([new A.b8(B.d6,new A.ep("http://localhost:3000/assets/image-assets/nodejs.png",f),f),new A.b8(B.c6,A.c7("Node.js is a single-threaded, open-source, cross-platform runtime environment for building fast and scalable server-side and networking applications. It runs on the V8 JavaScript runtime engine, and it uses event-driven, non-blocking I/O architecture, which makes it efficient and suitable for real-time applications",f,B.V,f),f)],q),B.ao),f,d)],q)),f,f),f),A.fw(f,new A.ep("http://localhost:3000/assets/image-assets/footer.png",f),B.c3,f,f,f,f,f)],q),e,!0)},
+d=d.b_(0,o==null?A.ak():o).a/2}return A.acR(A.b([new A.ep("http://localhost:8080/assets/image-assets/head.png",f),s,new A.ep("http://localhost:8080/assets/image-assets/gambar5.png",f),r,n,k,p,new A.b8(B.d6,l,f),i,h,new A.b8(B.l9,A.dn(A.a1o(A.b([j,A.cF(A.jF(A.b([new A.b8(B.d6,new A.ep("http://localhost:8080/assets/image-assets/nodejs.png",f),f),new A.b8(B.c6,A.c7("Node.js is a single-threaded, open-source, cross-platform runtime environment for building fast and scalable server-side and networking applications. It runs on the V8 JavaScript runtime engine, and it uses event-driven, non-blocking I/O architecture, which makes it efficient and suitable for real-time applications",f,B.V,f),f)],q),B.ao),f,d)],q)),f,f),f),A.fw(f,new A.ep("http://localhost:8080/assets/image-assets/footer.png",f),B.c3,f,f,f,f,f)],q),e,!0)},
 $S:373}
 A.Sk.prototype={
 $0(){},
