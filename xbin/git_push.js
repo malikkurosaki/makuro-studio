@@ -20,6 +20,7 @@ prompts({
 
 }).then(() => {
     require('./set_url_local');
-    require('./config_generate');
     
+}).then(() => {
+    require('./config_generate');
 });
