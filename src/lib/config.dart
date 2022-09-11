@@ -8,7 +8,7 @@ class Config {
   static
   const host = 'makurostudio.my.id';
   static
-  const url = 'https://makurostudio.my.id:8080';
+  const url = 'https://makurostudio.my.id';
   static
   const urlServer = 'https://makurostudio.my.id:8080';
   static

@@ -3,7 +3,7 @@
   "port": 8080,
   "protocol": "https",
   "host": "makurostudio.my.id",
-  "url": "https://makurostudio.my.id:8080",
+  "url": "https://makurostudio.my.id",
   "urlServer": "https://makurostudio.my.id:8080",
   "sHost": "103.171.85.55"
 }
