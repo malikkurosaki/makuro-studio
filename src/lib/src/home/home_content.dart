@@ -302,8 +302,12 @@ class HomeContent extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(16),
-                          child: Gambar(
-                            imageUrl: Img.flutter,
+                          child: SizedBox(
+                            width: media.isMobile ? Get.width : 200,
+                            height: 100,
+                            child: Gambar(
+                              imageUrl: Img.flutter,
+                            ),
                           ),
                         ),
                         Padding(
@@ -322,8 +326,12 @@ class HomeContent extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(16),
-                          child: Gambar(
-                            imageUrl: Img.nodejs,
+                          child: SizedBox(
+                            width: media.isMobile? Get.width : 200,
+                            height: 100,
+                            child: Gambar(
+                              imageUrl: Img.nodejs,
+                            ),
                           ),
                         ),
                         Padding(
@@ -346,8 +354,8 @@ class HomeContent extends StatelessWidget {
               imageUrl: Img.footer,
             ),
           ),
-          Text(Config.url.toString())
-          
+          // Text(Config.url.toString())
+
         ],
       ),
     );

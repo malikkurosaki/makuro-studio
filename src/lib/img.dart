@@ -30,6 +30,12 @@ class Img {
   const head = "${Config.url}/assets/image-assets/head.png";
 
   static
+  const login = "${Config.url}/assets/image-assets/login.png";
+
+  static
   const nodejs = "${Config.url}/assets/image-assets/nodejs.png";
+
+  static
+  const sigup = "${Config.url}/assets/image-assets/sigup.png";
 
 }

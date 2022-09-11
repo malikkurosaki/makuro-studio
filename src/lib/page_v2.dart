@@ -23,7 +23,7 @@ class Pages {
     Pages.login() {
         name = "Login";
         target = Login();
-        isMenu = true;
+        isMenu = false;
         path = "/login";
     }
 
@@ -51,7 +51,7 @@ class Pages {
 
 
     static final list = [
-        Pages.home(), Pages.login(), Pages.myHomePage(), Pages.root(), Pages.signUp()
+        Home(), Login(), MyHomePage(), Root(), SignUp()
     ];
 
     void go() {

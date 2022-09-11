@@ -1,0 +1,46 @@
+[{
+  "id": "home",
+  "name": "Home",
+  "path": "/home",
+  "target": "Home()",
+  "func": "home()",
+  "listItem": "Pages.home()",
+  "import": "import 'package:src/pages/home.dart';",
+  "isMenu": false
+}, {
+  "id": "login",
+  "name": "Login",
+  "path": "/login",
+  "target": "Login()",
+  "func": "login()",
+  "listItem": "Pages.login()",
+  "import": "import 'package:src/pages/login.dart';",
+  "isMenu": true
+}, {
+  "id": "my_home_page",
+  "name": "My Home Page",
+  "path": "/my-home-page",
+  "target": "MyHomePage()",
+  "func": "myHomePage()",
+  "listItem": "Pages.myHomePage()",
+  "import": "import 'package:src/pages/my_home_page.dart';",
+  "isMenu": false
+}, {
+  "id": "root",
+  "name": "Root",
+  "path": "/root",
+  "target": "Root()",
+  "func": "root()",
+  "listItem": "Pages.root()",
+  "import": "import 'package:src/pages/root.dart';",
+  "isMenu": false
+}, {
+  "id": "sign_up",
+  "name": "Sign Up",
+  "path": "/sign-up",
+  "target": "SignUp()",
+  "func": "signUp()",
+  "listItem": "Pages.signUp()",
+  "import": "import 'package:src/pages/sign_up.dart';",
+  "isMenu": true
+}]
