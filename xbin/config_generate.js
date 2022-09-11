@@ -5,16 +5,18 @@ const fs = require('fs');
 const path = require('path');
 const colors = require('colors');
 
-const key = Object.keys(config);
-let listItem = [];
-for (let itm of key) {
+module.exports = (async () => {
+  const key = Object.keys(config);
+  let listItem = [];
+  for (let itm of key) {
     listItem.push(`static const ${itm} = ${_.isString(config[itm]) ? `'${config[itm]}'` : config[itm]};`);
-}
+  }
 
-const result = `
+  const result = `
 class Config{
   ${listItem.join('\n')}
 }
 `
-fs.writeFileSync(path.join(__dirname, "../src/lib/config.dart"), beautify(result, { indent_size: 2 }));
-console.log("config generate complete".green);
+  fs.writeFileSync(path.join(__dirname, "../src/lib/config.dart"), beautify(result, { indent_size: 2 }));
+  console.log("config generate complete".green);
+})()
