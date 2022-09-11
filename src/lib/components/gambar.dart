@@ -29,6 +29,8 @@ class Gambar extends StatelessWidget {
           color: Colors.grey.shade300,
         ),
       ),
+      useOldImageOnUrlChange: true,
+      
       
     );
   }
