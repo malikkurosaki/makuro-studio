@@ -19,6 +19,7 @@ require('prompts')({
     menu();
 })
 
+
 function addMenu() {
     const colors = require('colors');
     const fs = require('fs');
