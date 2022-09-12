@@ -1,0 +1,49 @@
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const beautify = require('js-beautify');
+const _ = require('lodash');
+
+
+const targetPath = path.join(__dirname, "./xbin");
+const targetDir = fs.readdirSync(targetPath);
+
+const listFunc = [];
+let stringResult = "";
+for (let itm of targetDir) {
+    const name = path.parse(itm).name;
+    const targetFile = fs.readFileSync(path.join(targetPath, itm)).toString();
+
+    listFunc.push(_.camelCase(name));
+
+    const dataBody = `
+    function ${_.camelCase(name)}(){${targetFile}}
+    `
+    stringResult += `${beautify(dataBody) }`
+
+}
+
+const tmp = `
+#!/usr/bin/env node
+
+let listFunc = [${listFunc.join(',')}]
+const lds = require('lodash');
+require('prompts')({
+    type: "autocomplete",
+    message: "pilih menu",
+    name: "menu",
+    choices: listFunc.map(e => {
+        return {
+            title: lds.startCase(e.name),
+            value: e
+        }
+    })
+}).then(({menu}) => {
+    if(!menu) console.log("ok")
+    menu();
+})
+
+${stringResult}
+`
+
+fs.writeFileSync('./xcontoh.js', beautify(tmp));
